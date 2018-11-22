@@ -1,0 +1,46 @@
+body{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 100px;
+  background-color: #333;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+#preloader{
+  position: absolute;
+  overflow: hidden;
+  top: 40%;
+  left: 35%;
+  width: 400px;
+  height: 100px;
+}
+#preloader::before{
+  content: "";
+  position: absolute;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQYV2M0Njb+z4AGGEGCZ8+eZYSJg/gkCqKbCQBKohP+FTCWSAAAAABJRU5ErkJggg==);
+  width: 400px;
+  height: 100px;
+  z-index: 999;
+  opacity: 0.2;
+}
+#preloader .digits{
+  position: absolute;
+  top: 0;
+  animation:  slide 11s steps(11, end) infinite;
+}
+@keyframes slide{
+  from{
+    top: 0;
+  }
+  to{
+    top: -1100px;
+  }
+}
+#preloader>.digits div{
+  padding-left: 25px;
+  line-height: 100px;
+  width: 400px;
+  height: 100px;
+}
+#preloader>.digits>:nth-child(1)>span{
+  margin: 0 20px;
+}
